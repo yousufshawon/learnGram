@@ -30,9 +30,25 @@
                     <view key="view" contentMode="scaleToFill" id="ezp-Nn-eo0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="............." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaq-3B-Jf7">
+                                <rect key="frame" x="50" y="430" width="314" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KdG-t0-2J3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KdG-t0-2J3" firstAttribute="trailing" secondItem="iaq-3B-Jf7" secondAttribute="trailing" constant="50" id="2Xb-2l-Beg"/>
+                            <constraint firstItem="iaq-3B-Jf7" firstAttribute="leading" secondItem="KdG-t0-2J3" secondAttribute="leading" constant="50" id="jkd-CN-fym"/>
+                            <constraint firstItem="iaq-3B-Jf7" firstAttribute="centerY" secondItem="ezp-Nn-eo0" secondAttribute="centerY" id="wvL-ZF-hLg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="iaq-3B-Jf7" id="K9y-O2-8dz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBJ-o4-8MN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,6 +58,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
