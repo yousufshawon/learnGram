@@ -54,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="-2055" y="-619"/>
         </scene>
-        <!--Login Controller-->
+        <!--Login-->
         <scene sceneID="uYu-JX-N7c">
             <objects>
                 <viewController storyboardIdentifier="LoginController" id="6r0-pb-zVN" customClass="LoginController" customModule="learnGram" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oh-ct-2sT">
-                                <rect key="frame" x="50" y="200" width="314" height="40"/>
+                                <rect key="frame" x="50" y="244" width="314" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lA8-qg-04a"/>
                                 </constraints>
@@ -72,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-da-akQ">
-                                <rect key="frame" x="50" y="248" width="314" height="45"/>
+                                <rect key="frame" x="50" y="292" width="314" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="qeU-eJ-Ec9"/>
                                 </constraints>
@@ -80,7 +80,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-TX-weA">
-                                <rect key="frame" x="50" y="361" width="314" height="45"/>
+                                <rect key="frame" x="50" y="405" width="314" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="wod-3F-vbf"/>
                                 </constraints>
@@ -88,7 +88,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-QR-6jN">
-                                <rect key="frame" x="50" y="313" width="314" height="40"/>
+                                <rect key="frame" x="50" y="357" width="314" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9fQ-QN-bM3"/>
                                 </constraints>
@@ -97,13 +97,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LearnGram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APG-ff-mkS">
-                                <rect key="frame" x="50" y="124" width="314" height="36"/>
+                                <rect key="frame" x="50" y="168" width="314" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpB-tN-ApE">
-                                <rect key="frame" x="50" y="431" width="314" height="40"/>
+                                <rect key="frame" x="50" y="475" width="314" height="40"/>
                                 <color key="backgroundColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dWm-0j-XE9"/>
@@ -114,7 +114,7 @@
                                 <state key="normal" title="Log in"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXw-iA-F9Q">
-                                <rect key="frame" x="50" y="501" width="314" height="40"/>
+                                <rect key="frame" x="50" y="545" width="314" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CNu-6M-aB3"/>
                                 </constraints>
@@ -125,7 +125,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNY-fd-h3X">
-                                <rect key="frame" x="50" y="571" width="314" height="40"/>
+                                <rect key="frame" x="50" y="615" width="314" height="40"/>
                                 <color key="backgroundColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="yph-9e-JwQ"/>
@@ -166,10 +166,33 @@
                             <constraint firstItem="QKd-QR-6jN" firstAttribute="leading" secondItem="0Oh-ct-2sT" secondAttribute="leading" id="ysi-EJ-tQA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="CVp-lC-xPs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DN-f2-O2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1165.217391304348" y="-619.41964285714278"/>
+            <point key="canvasLocation" x="-1190" y="43"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G4F-Ll-3z7">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Ooc-vj-Dx8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CTP-lI-d7c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6r0-pb-zVN" kind="relationship" relationship="rootViewController" id="gbc-Kv-3Xo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8W-rC-HeX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2033" y="43"/>
         </scene>
     </scenes>
     <resources>

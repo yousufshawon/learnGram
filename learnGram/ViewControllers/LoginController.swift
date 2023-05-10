@@ -8,6 +8,8 @@
 import UIKit
 
 class LoginController: UIViewController {
+    
+    static let storyboardId = "LoginController"
 
     override func viewDidLoad() {
         super.viewDidLoad()

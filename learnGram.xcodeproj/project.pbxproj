@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB6E9B792A0BF663008917B4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E9B782A0BF663008917B4 /* LoginController.swift */; };
+		CB6E9B7B2A0C1A0B008917B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E9B7A2A0C1A0B008917B4 /* Constants.swift */; };
 		CB6F292B29FF919D0041FDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F292A29FF919D0041FDE7 /* AppDelegate.swift */; };
 		CB6F292D29FF919D0041FDE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F292C29FF919D0041FDE7 /* SceneDelegate.swift */; };
 		CB6F292F29FF919D0041FDE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F292E29FF919D0041FDE7 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		CB6E9B782A0BF663008917B4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CB6E9B7A2A0C1A0B008917B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB6F292729FF919D0041FDE7 /* learnGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6F292A29FF919D0041FDE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB6F292C29FF919D0041FDE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CB6F294529FFF85C0041FDE7 /* Utility.swift */,
+				CB6E9B7A2A0C1A0B008917B4 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				CB6F294A2A0014B50041FDE7 /* SplashRepoProtocol.swift in Sources */,
 				CB6F294829FFFA2E0041FDE7 /* SplashViewController.swift in Sources */,
 				CB6F294F2A0015F40041FDE7 /* SplashDataSource.swift in Sources */,
+				CB6E9B7B2A0C1A0B008917B4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

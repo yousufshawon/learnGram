@@ -41,6 +41,30 @@ class SplashViewController: UIViewController {
     
     func loadLoginScreen() {
         print("Load LoginScreen")
+        
+        // This presents a ViewController
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: LoginController.storyboardId) as! LoginController
+//        self.present(newViewController, animated: true, completion: nil)
+        
+        
+        if let loginNavigationController = self.storyboard?.instantiateViewController(
+            withIdentifier: Constants.ViewController.loginNavigationControllerStoryboardId) as? UINavigationController {
+           
+            // This presents a NavigationViewController
+            //self.present(loginNavigationController, animated: true)
+            
+            if let windowScent = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                if let sceneDelegate = windowScent.delegate as? SceneDelegate {
+                    sceneDelegate.window?.rootViewController = loginNavigationController
+                }
+            }
+
+        }
+        
+
+        
+        
     }
 
     /*
