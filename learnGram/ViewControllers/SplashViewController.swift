@@ -18,6 +18,13 @@ class SplashViewController: UIViewController {
         print("SplashViewController: viewDidLoad")
         // Do any additional setup after loading the view.
         self.textLabel.text = viewModel.getSplashText()
+        
+        // This works with selector
+        //Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(timerFireMethod), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false ) { timer in
+            self.loadLoginScreen()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +32,16 @@ class SplashViewController: UIViewController {
         print("SplashViewController: viewWillAppear")
     }
     
+    
+    @objc func timerFireMethod() {
+        print("timerFireMethod")
+        loadLoginScreen()
+       
+    }
+    
+    func loadLoginScreen() {
+        print("Load LoginScreen")
+    }
 
     /*
     // MARK: - Navigation
