@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB6E9B792A0BF663008917B4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E9B782A0BF663008917B4 /* LoginController.swift */; };
 		CB6F292B29FF919D0041FDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F292A29FF919D0041FDE7 /* AppDelegate.swift */; };
 		CB6F292D29FF919D0041FDE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F292C29FF919D0041FDE7 /* SceneDelegate.swift */; };
 		CB6F292F29FF919D0041FDE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F292E29FF919D0041FDE7 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB6E9B782A0BF663008917B4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CB6F292729FF919D0041FDE7 /* learnGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6F292A29FF919D0041FDE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB6F292C29FF919D0041FDE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				CB6F292E29FF919D0041FDE7 /* ViewController.swift */,
 				CB6F294729FFFA2E0041FDE7 /* SplashViewController.swift */,
+				CB6E9B782A0BF663008917B4 /* LoginController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6E9B792A0BF663008917B4 /* LoginController.swift in Sources */,
 				CB6F294C2A0015AC0041FDE7 /* SplashRepositoryImpl.swift in Sources */,
 				CB6F294629FFF85C0041FDE7 /* Utility.swift in Sources */,
 				CB6F29532A0018120041FDE7 /* SplashDataModel.swift in Sources */,
