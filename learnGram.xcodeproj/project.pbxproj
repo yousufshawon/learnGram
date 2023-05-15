@@ -22,6 +22,7 @@
 		CB6F294F2A0015F40041FDE7 /* SplashDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F294E2A0015F40041FDE7 /* SplashDataSource.swift */; };
 		CB6F29512A00173E0041FDE7 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F29502A00173E0041FDE7 /* SplashViewModel.swift */; };
 		CB6F29532A0018120041FDE7 /* SplashDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F29522A0018120041FDE7 /* SplashDataModel.swift */; };
+		CBFA1D872A1295E000D4F257 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA1D862A1295E000D4F257 /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CB6F294E2A0015F40041FDE7 /* SplashDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataSource.swift; sourceTree = "<group>"; };
 		CB6F29502A00173E0041FDE7 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		CB6F29522A0018120041FDE7 /* SplashDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataModel.swift; sourceTree = "<group>"; };
+		CBFA1D862A1295E000D4F257 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CB6F292E29FF919D0041FDE7 /* ViewController.swift */,
 				CB6F294729FFFA2E0041FDE7 /* SplashViewController.swift */,
 				CB6E9B782A0BF663008917B4 /* LoginController.swift */,
+				CBFA1D862A1295E000D4F257 /* ForgotPasswordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				CB6F292D29FF919D0041FDE7 /* SceneDelegate.swift in Sources */,
 				CB6F294A2A0014B50041FDE7 /* SplashRepoProtocol.swift in Sources */,
 				CB6F294829FFFA2E0041FDE7 /* SplashViewController.swift in Sources */,
+				CBFA1D872A1295E000D4F257 /* ForgotPasswordViewController.swift in Sources */,
 				CB6F294F2A0015F40041FDE7 /* SplashDataSource.swift in Sources */,
 				CB6E9B7B2A0C1A0B008917B4 /* Constants.swift in Sources */,
 			);
