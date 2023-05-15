@@ -23,6 +23,7 @@
 		CB6F29512A00173E0041FDE7 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F29502A00173E0041FDE7 /* SplashViewModel.swift */; };
 		CB6F29532A0018120041FDE7 /* SplashDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F29522A0018120041FDE7 /* SplashDataModel.swift */; };
 		CBFA1D872A1295E000D4F257 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA1D862A1295E000D4F257 /* ForgotPasswordViewController.swift */; };
+		CBFA1D892A12AE2E00D4F257 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA1D882A12AE2D00D4F257 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CB6F29502A00173E0041FDE7 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		CB6F29522A0018120041FDE7 /* SplashDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataModel.swift; sourceTree = "<group>"; };
 		CBFA1D862A1295E000D4F257 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CBFA1D882A12AE2D00D4F257 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				CB6F294729FFFA2E0041FDE7 /* SplashViewController.swift */,
 				CB6E9B782A0BF663008917B4 /* LoginController.swift */,
 				CBFA1D862A1295E000D4F257 /* ForgotPasswordViewController.swift */,
+				CBFA1D882A12AE2D00D4F257 /* SignupViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				CB6F29512A00173E0041FDE7 /* SplashViewModel.swift in Sources */,
 				CB6F292B29FF919D0041FDE7 /* AppDelegate.swift in Sources */,
 				CB6F292D29FF919D0041FDE7 /* SceneDelegate.swift in Sources */,
+				CBFA1D892A12AE2E00D4F257 /* SignupViewController.swift in Sources */,
 				CB6F294A2A0014B50041FDE7 /* SplashRepoProtocol.swift in Sources */,
 				CB6F294829FFFA2E0041FDE7 /* SplashViewController.swift in Sources */,
 				CBFA1D872A1295E000D4F257 /* ForgotPasswordViewController.swift in Sources */,
