@@ -54,8 +54,8 @@ class SplashViewController: UIViewController {
             // This presents a NavigationViewController
             //self.present(loginNavigationController, animated: true)
             
-            if let windowScent = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                if let sceneDelegate = windowScent.delegate as? SceneDelegate {
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                if let sceneDelegate = windowScene.delegate as? SceneDelegate {
                     sceneDelegate.window?.rootViewController = loginNavigationController
                 }
             }

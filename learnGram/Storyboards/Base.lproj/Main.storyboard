@@ -108,6 +108,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password? Click to reset now">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="dz9-0M-0AQ" kind="show" id="r8Y-vp-QdI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNY-fd-h3X">
                                 <rect key="frame" x="50" y="619" width="314" height="40"/>
@@ -178,6 +181,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8W-rC-HeX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2148" y="-524"/>
+        </scene>
+        <!--Forgot Password-->
+        <scene sceneID="qVh-LS-d0b">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPasswordViewController" id="dz9-0M-0AQ" customClass="ForgotPasswordViewController" customModule="learnGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Tf-j3-d2r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AmW-IM-xt7">
+                                <rect key="frame" x="50" y="172" width="314" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="STK-jF-VzG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq8-bS-2lV">
+                                <rect key="frame" x="50" y="237" width="314" height="40"/>
+                                <color key="backgroundColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="X0s-hC-qeP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Reset Password"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DjR-b3-VpJ"/>
+                        <color key="backgroundColor" red="0.95442160070000004" green="1" blue="0.90014274930000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Dq8-bS-2lV" firstAttribute="top" secondItem="AmW-IM-xt7" secondAttribute="bottom" constant="20" id="3zv-Vc-9Ph"/>
+                            <constraint firstItem="Dq8-bS-2lV" firstAttribute="leading" secondItem="AmW-IM-xt7" secondAttribute="leading" id="8kR-gM-cwF"/>
+                            <constraint firstItem="AmW-IM-xt7" firstAttribute="top" secondItem="DjR-b3-VpJ" secondAttribute="top" constant="80" id="9hk-En-DDN"/>
+                            <constraint firstItem="AmW-IM-xt7" firstAttribute="leading" secondItem="DjR-b3-VpJ" secondAttribute="leading" constant="50" id="AVS-o0-hSk"/>
+                            <constraint firstItem="Dq8-bS-2lV" firstAttribute="trailing" secondItem="AmW-IM-xt7" secondAttribute="trailing" id="OV5-8c-51j"/>
+                            <constraint firstItem="DjR-b3-VpJ" firstAttribute="trailing" secondItem="AmW-IM-xt7" secondAttribute="trailing" constant="50" id="b1O-km-vtD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Forgot Password" id="EtF-Oa-Lal"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xD-Ia-6Xn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-546" y="-524"/>
         </scene>
     </scenes>
 </document>
