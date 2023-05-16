@@ -11,5 +11,6 @@ class Constants {
    
     class ViewController {
         static let loginNavigationControllerStoryboardId = "LoginNavigationController"
+        static let appTabBarControllerStodyboardId = "AppTabBarController"
     }
 }

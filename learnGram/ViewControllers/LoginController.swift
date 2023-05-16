@@ -17,6 +17,27 @@ class LoginController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func onLogin() {
+        // do validation
+        // after sccess
+        print("onLogin")
+       
+        
+        if let tabBarController = self.storyboard?.instantiateViewController(
+            withIdentifier: Constants.ViewController.appTabBarControllerStodyboardId) as? UITabBarController {
+           
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                if let sceneDelegate = windowScene.delegate as? SceneDelegate {
+                    sceneDelegate.window?.rootViewController = tabBarController
+                }
+            }
+
+        }
+        
+    }
+    
 
     /*
     // MARK: - Navigation
