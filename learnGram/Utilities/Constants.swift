@@ -13,4 +13,8 @@ class Constants {
         static let loginNavigationControllerStoryboardId = "LoginNavigationController"
         static let appTabBarControllerStodyboardId = "AppTabBarController"
     }
+    
+    class ColorHex {
+        static let themeColor = "#524eccff"
+    }
 }
