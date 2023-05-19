@@ -10,31 +10,57 @@ import UIKit
 class LoginController: UIViewController {
     
     static let storyboardId = "LoginController"
+    
+    @IBOutlet var errorLabel : UILabel!
+    @IBOutlet var emailTextField : UITextField!
+    @IBOutlet var passwordTextField : UITextField!
+    
+    private let viewModel = LoginViewModel(authManager: LocalAuthManager(authDataSource: AuthDataSource()))
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        initView()
+    }
+    
+    private func initView() {
+        errorLabel.text = ""
     }
     
     
     @IBAction func onLogin() {
-        // do validation
-        // after sccess
-        print("onLogin")
-       
         
-        if let tabBarController = self.storyboard?.instantiateViewController(
-            withIdentifier: Constants.ViewController.appTabBarControllerStodyboardId) as? UITabBarController {
-           
-            
-            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                if let sceneDelegate = windowScene.delegate as? SceneDelegate {
-                    sceneDelegate.window?.rootViewController = tabBarController
+        print("onLogin")
+        
+        // do validation
+        
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        
+        print("Email: \(email) Password: \(password)")
+        
+        let userId = viewModel.getUserId(withEmail: email!, andPassword: password!)
+        
+        if (userId != -1) {
+            errorLabel.text  = ""
+            // after sccess
+            // move to Home
+            print("Moving to Home")
+            if let tabBarController = self.storyboard?.instantiateViewController(
+                withIdentifier: Constants.ViewController.appTabBarControllerStodyboardId) as? UITabBarController {
+                
+                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                    if let sceneDelegate = windowScene.delegate as? SceneDelegate {
+                        sceneDelegate.window?.rootViewController = tabBarController
+                    }
                 }
-            }
 
+            }
+            
+        } else {
+            errorLabel.text = "Invalid Credential!"
         }
+         
         
     }
     
