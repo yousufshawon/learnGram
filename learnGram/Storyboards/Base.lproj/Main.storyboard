@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,7 +63,7 @@
                                     <constraint firstAttribute="height" constant="45" id="qeU-eJ-Ec9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-TX-weA">
                                 <rect key="frame" x="25" y="389" width="364" height="45"/>
@@ -70,7 +71,7 @@
                                     <constraint firstAttribute="height" constant="45" id="wod-3F-vbf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-QR-6jN">
                                 <rect key="frame" x="25" y="341" width="364" height="40"/>
@@ -82,7 +83,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LearnGram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APG-ff-mkS">
-                                <rect key="frame" x="50" y="152" width="314" height="36"/>
+                                <rect key="frame" x="50" y="132" width="314" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -129,6 +130,12 @@
                                     <segue destination="zUJ-r5-Iqh" kind="show" id="kmz-d6-rf6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qao-Ht-ihB">
+                                <rect key="frame" x="20" y="198" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ehR-RI-U1F"/>
                         <color key="backgroundColor" red="0.95442160070000004" green="1" blue="0.90014274930000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -141,15 +148,18 @@
                             <constraint firstItem="HNY-fd-h3X" firstAttribute="leading" secondItem="0Oh-ct-2sT" secondAttribute="leading" id="9o3-PC-aNj"/>
                             <constraint firstItem="APG-ff-mkS" firstAttribute="leading" secondItem="ehR-RI-U1F" secondAttribute="leading" constant="50" id="AYh-gd-dcj"/>
                             <constraint firstItem="yXw-iA-F9Q" firstAttribute="trailing" secondItem="0Oh-ct-2sT" secondAttribute="trailing" id="EdX-C0-EsW"/>
-                            <constraint firstItem="APG-ff-mkS" firstAttribute="top" secondItem="ehR-RI-U1F" secondAttribute="top" constant="60" id="HsB-4m-1fY"/>
+                            <constraint firstItem="ehR-RI-U1F" firstAttribute="trailing" secondItem="Qao-Ht-ihB" secondAttribute="trailing" constant="20" id="H85-UN-Lek"/>
+                            <constraint firstItem="APG-ff-mkS" firstAttribute="top" secondItem="ehR-RI-U1F" secondAttribute="top" constant="40" id="HsB-4m-1fY"/>
+                            <constraint firstItem="Qao-Ht-ihB" firstAttribute="leading" secondItem="ehR-RI-U1F" secondAttribute="leading" constant="20" id="Hsb-yg-PeV"/>
                             <constraint firstItem="wpB-tN-ApE" firstAttribute="leading" secondItem="0Oh-ct-2sT" secondAttribute="leading" id="MY5-5Q-sfN"/>
+                            <constraint firstItem="Qao-Ht-ihB" firstAttribute="top" secondItem="APG-ff-mkS" secondAttribute="bottom" constant="30" id="Mzx-EN-rhh"/>
                             <constraint firstItem="wpB-tN-ApE" firstAttribute="top" secondItem="poZ-TX-weA" secondAttribute="bottom" constant="25" id="SI4-eh-Yd0"/>
                             <constraint firstItem="wpB-tN-ApE" firstAttribute="trailing" secondItem="0Oh-ct-2sT" secondAttribute="trailing" id="Sxx-sa-vnq"/>
                             <constraint firstItem="yXw-iA-F9Q" firstAttribute="leading" secondItem="0Oh-ct-2sT" secondAttribute="leading" id="Uxs-qo-g9y"/>
                             <constraint firstItem="QKd-QR-6jN" firstAttribute="trailing" secondItem="0Oh-ct-2sT" secondAttribute="trailing" id="WIn-1A-5tT"/>
                             <constraint firstItem="poZ-TX-weA" firstAttribute="leading" secondItem="0Oh-ct-2sT" secondAttribute="leading" id="WLv-HJ-Pkf"/>
                             <constraint firstItem="HNY-fd-h3X" firstAttribute="trailing" secondItem="0Oh-ct-2sT" secondAttribute="trailing" id="Z1m-7c-DpJ"/>
-                            <constraint firstItem="0Oh-ct-2sT" firstAttribute="top" secondItem="APG-ff-mkS" secondAttribute="bottom" constant="40" id="ZIY-p8-jL2"/>
+                            <constraint firstItem="0Oh-ct-2sT" firstAttribute="top" secondItem="APG-ff-mkS" secondAttribute="bottom" constant="60" id="ZIY-p8-jL2"/>
                             <constraint firstItem="0Oh-ct-2sT" firstAttribute="leading" secondItem="ehR-RI-U1F" secondAttribute="leading" constant="25" id="ebL-Mq-oej"/>
                             <constraint firstItem="QKd-QR-6jN" firstAttribute="leading" secondItem="0Oh-ct-2sT" secondAttribute="leading" id="ocf-W2-79B"/>
                             <constraint firstItem="k2e-da-akQ" firstAttribute="top" secondItem="0Oh-ct-2sT" secondAttribute="bottom" constant="8" id="smp-fq-AXJ"/>
@@ -161,10 +171,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="CVp-lC-xPs"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="k2e-da-akQ" id="MIS-YW-rID"/>
+                        <outlet property="errorLabel" destination="Qao-Ht-ihB" id="afm-pL-4Au"/>
+                        <outlet property="passwordTextField" destination="poZ-TX-weA" id="LwO-1A-WXC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DN-f2-O2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1306" y="-524"/>
+            <point key="canvasLocation" x="-1307.2463768115942" y="-524.33035714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G4F-Ll-3z7">
@@ -630,5 +645,8 @@
         <image name="profile" width="24" height="24"/>
         <image name="profileavatar" width="250" height="250"/>
         <image name="search" width="24" height="24"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
