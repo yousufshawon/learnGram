@@ -9,17 +9,27 @@ import Foundation
 
 class AuthDataSource {
     
+    static let shared  = AuthDataSource()
+    
     private var credentials : [AuthData] = [];
     
-    init() {
+    
+    private init() {
+        buildInitialCredeintials()
+    }
+    
+    private func buildInitialCredeintials() {
+        if(!credentials.isEmpty) {
+            return
+        }
+        
         let count = 1...5
         for id in count {
             let authData = AuthData(id: id, email: "user\(id)@demo.com", password: "pass\(id)")
-            //print("id: \(id) \(authData)")
             credentials.append(authData)
         }
         
-        print("Credentials: \(credentials)")
+        print("AuthDataSource: Credentials: \(credentials)")
     }
     
     func getUserId(withEmail email:String, andPassword password:String) -> Int {
@@ -30,6 +40,11 @@ class AuthDataSource {
         }
         
         return -1
+    }
+    
+    func addAuthData(authData:AuthData) {
+        credentials.append(authData)
+        print("AuthDataSource: Total auth Data: \(credentials.count)")
     }
     
 }

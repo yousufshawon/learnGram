@@ -10,4 +10,6 @@ import Foundation
 protocol AuthManagerProtocol {
     
     func getUserId(withEmail email:String, andPassword password:String) -> Int
+    
+    func addAuthData(authData : AuthData)
 }

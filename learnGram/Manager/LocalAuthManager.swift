@@ -8,15 +8,14 @@
 import Foundation
 
 class LocalAuthManager : AuthManagerProtocol {
-
-    private let authDataSource : AuthDataSource
     
-    init(authDataSource: AuthDataSource) {
-        self.authDataSource = authDataSource
+    
+    func addAuthData(authData: AuthData) {
+        AuthDataSource.shared.addAuthData(authData: authData)
     }
     
     func getUserId(withEmail email: String, andPassword password: String) -> Int {
-        return authDataSource.getUserId(withEmail: email, andPassword: password)
+        return AuthDataSource.shared.getUserId(withEmail: email, andPassword: password)
     }
     
     

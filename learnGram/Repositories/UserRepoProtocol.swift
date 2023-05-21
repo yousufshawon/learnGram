@@ -9,7 +9,10 @@ import Foundation
 
 protocol UserRepoProtocol {
     
-    
-    func getUserProfile()
-    func storeUserProfile()
+    func getTotalUser() -> Int
+    func addUser(user : User) -> Bool
+    func getUser() -> User?
+    func setUser(user:User)
+    func getUserById(userId : Int) -> User?
+    func onLogout()
 }

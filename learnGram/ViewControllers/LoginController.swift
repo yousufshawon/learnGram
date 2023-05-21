@@ -15,11 +15,12 @@ class LoginController: UIViewController {
     @IBOutlet var emailTextField : UITextField!
     @IBOutlet var passwordTextField : UITextField!
     
-    private let viewModel = LoginViewModel(authManager: LocalAuthManager(authDataSource: AuthDataSource()))
+    private let viewModel = LoginViewModel(authManager: LocalAuthManager(), userRepository: UserLocalRepository())
+    private let navigationManager = NavigationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("LoginController viewDidLoad()")
         initView()
     }
     
@@ -39,22 +40,28 @@ class LoginController: UIViewController {
         
         print("Email: \(email) Password: \(password)")
         
-        let userId = viewModel.getUserId(withEmail: email!, andPassword: password!)
+        if(!email!.isValidEmail) {
+            errorLabel.text = "Invalid email"
+            return
+        }
         
+        let userId = viewModel.getUserId(withEmail: email!, andPassword: password!)
         if (userId != -1) {
-            errorLabel.text  = ""
-            // after sccess
-            // move to Home
-            print("Moving to Home")
-            if let tabBarController = self.storyboard?.instantiateViewController(
-                withIdentifier: Constants.ViewController.appTabBarControllerStodyboardId) as? UITabBarController {
+            
+            let currentUser = viewModel.getUserWithId(userId: userId)
+            if(currentUser != nil) {
+                // after sccess
+                print("Logged in user: \(String(describing: currentUser))")
+                viewModel.onLoginSuccess(user: currentUser!)
                 
-                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                    if let sceneDelegate = windowScene.delegate as? SceneDelegate {
-                        sceneDelegate.window?.rootViewController = tabBarController
-                    }
-                }
-
+                errorLabel.text  = ""
+                
+                // move to Home
+                print("Moving to Home")
+                navigationManager.replaceWithAppBarController(currentViewController: self)
+                
+            } else {
+                errorLabel.text = "User not found"
             }
             
         } else {

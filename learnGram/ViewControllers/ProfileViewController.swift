@@ -12,6 +12,11 @@ class ProfileViewController: UIViewController {
     static let storyboardId = "ProfileViewController"
     
     @IBOutlet private var profileImageView : UIImageView!
+    @IBOutlet private var buttonLogout : UIButton!
+    @IBOutlet private var labelName : UILabel!
+    
+    private let navigationManager = NavigationManager()
+    private let viewModel = ProfiViewModel(userRepository: UserLocalRepository())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +32,23 @@ class ProfileViewController: UIViewController {
         
         profileImageView.makeCircleShape()
         profileImageView.makeBorder(borderWidth: 3.0, color: borderColor! )
+        
+        setUserProfile()
+    }
+    
+    @IBAction private func onLogoutAction() {
+        viewModel.onLogout()
+        navigationManager.replaceWithLoginNavigationController(currentViewController: self)
+    }
+    
+    private func setUserProfile() {
+        let user = viewModel.getUser()
+        
+        if(user != nil) {
+            labelName.text = user?.getName()
+        } else {
+            labelName.text = "....."
+        }
     }
     
     
