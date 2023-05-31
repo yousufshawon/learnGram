@@ -40,6 +40,9 @@ class LoginController: UIViewController {
         
         print("Email: \(email) Password: \(password)")
         
+        // remove this line. test code
+        navigationManager.replaceWithAppBarController(currentViewController: self)
+        
         if(!email!.isValidEmail) {
             errorLabel.text = "Invalid email"
             return

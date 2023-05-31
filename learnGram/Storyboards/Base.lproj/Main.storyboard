@@ -226,14 +226,33 @@
         <!--Home-->
         <scene sceneID="Xc5-Lm-wrW">
             <objects>
-                <viewController id="uOw-BN-Dmj" userLabel="Home" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="uOw-BN-Dmj" userLabel="Home" customClass="HomeViewController" customModule="learnGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ydb-7Q-MJ4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-t5-tIB">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uOw-BN-Dmj" id="5kP-Of-mcV"/>
+                                    <outlet property="delegate" destination="uOw-BN-Dmj" id="tLh-2D-rSl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="S0X-FN-Mhh"/>
                         <color key="backgroundColor" red="0.95442160070000004" green="1" blue="0.90014274930000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="S0X-FN-Mhh" firstAttribute="bottom" secondItem="wSC-t5-tIB" secondAttribute="bottom" id="9em-3D-8Vc"/>
+                            <constraint firstItem="wSC-t5-tIB" firstAttribute="leading" secondItem="S0X-FN-Mhh" secondAttribute="leading" id="BqC-sF-XOY"/>
+                            <constraint firstItem="S0X-FN-Mhh" firstAttribute="trailing" secondItem="wSC-t5-tIB" secondAttribute="trailing" id="nwg-lr-TJ6"/>
+                            <constraint firstItem="wSC-t5-tIB" firstAttribute="top" secondItem="S0X-FN-Mhh" secondAttribute="top" id="rRj-nC-ECo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="k9k-gh-4Ax"/>
+                    <connections>
+                        <outlet property="tableView" destination="wSC-t5-tIB" id="8X2-b8-sQF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKC-DU-Q2P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -551,7 +570,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am at least 18 years old." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fb-nk-Czh">
-                                <rect key="frame" x="94" y="562" width="192" height="21"/>
+                                <rect key="frame" x="94" y="562" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -598,6 +617,7 @@
                             <constraint firstItem="dth-AJ-pmp" firstAttribute="top" secondItem="JQY-9V-nhX" secondAttribute="bottom" constant="6" id="kFl-xr-XpH"/>
                             <constraint firstItem="LLT-sY-gOR" firstAttribute="leading" secondItem="4LP-bC-btU" secondAttribute="leading" id="kSc-i5-PLf"/>
                             <constraint firstItem="Cmh-VU-imZ" firstAttribute="leading" secondItem="4LP-bC-btU" secondAttribute="leading" id="lcn-wN-Kxh"/>
+                            <constraint firstItem="1o1-wX-oIJ" firstAttribute="trailing" secondItem="7fb-nk-Czh" secondAttribute="trailing" constant="20" id="mbi-id-hkB"/>
                             <constraint firstItem="JQY-9V-nhX" firstAttribute="trailing" secondItem="4LP-bC-btU" secondAttribute="trailing" id="qKK-Os-oMy"/>
                             <constraint firstItem="JQY-9V-nhX" firstAttribute="leading" secondItem="4LP-bC-btU" secondAttribute="leading" id="qr6-Ik-GfB"/>
                             <constraint firstItem="2vd-bL-OfK" firstAttribute="leading" secondItem="4LP-bC-btU" secondAttribute="leading" id="yM8-LL-FSb"/>
@@ -682,6 +702,9 @@
         <image name="profile" width="24" height="24"/>
         <image name="profileavatar" width="250" height="250"/>
         <image name="search" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
