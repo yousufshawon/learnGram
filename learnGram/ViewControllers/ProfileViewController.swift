@@ -14,13 +14,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet private var profileImageView : UIImageView!
     @IBOutlet private var buttonLogout : UIButton!
     @IBOutlet private var labelName : UILabel!
+    @IBOutlet private var collectionView : UICollectionView!
     
     private let navigationManager = NavigationManager()
-    private let viewModel = ProfiViewModel(userRepository: UserLocalRepository())
+    let viewModel = ProfiViewModel(userRepository: UserLocalRepository())
+    var cellSize = 120.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let imageCellNib = UINib(nibName: ImageCell.identifierName, bundle: nil)
+        collectionView.register(imageCellNib, forCellWithReuseIdentifier: ImageCell.identifierName)
+        collectionView.setCollectionViewLayout(UICollectionViewFlowLayout.init(), animated: true)
+        
+        calculateCellSize()
         initView()
         
         // Do any additional setup after loading the view.
@@ -34,6 +41,21 @@ class ProfileViewController: UIViewController {
         profileImageView.makeBorder(borderWidth: 3.0, color: borderColor! )
         
         setUserProfile()
+    }
+    
+    func calculateCellSize(){
+        let items = viewModel.itemsInCollectiRow
+        print("Items in row: \(items)")
+        let spacingBetweenItem = 10
+        let horizontalMargin = 10
+        let totalSpacing = horizontalMargin +  (items - 1) * spacingBetweenItem + horizontalMargin
+        print("Total spacing: \(totalSpacing)")
+        
+        let width = self.view.frame.width
+        print("Width: \(width)")
+        self.cellSize = (width - Double(totalSpacing)) / Double(items)
+        print("Cell size: \(self.cellSize)")
+        
     }
     
     @IBAction private func onLogoutAction() {

@@ -41,4 +41,22 @@ class NavigationManager {
         }
     }
     
+   static func pushViewControllerToNavigationController(from currentViewController : UIViewController, with storyboardId: String) {
+        if let navigationController = currentViewController.navigationController {
+            
+            if let viewController = currentViewController.storyboard?.instantiateViewController(withIdentifier: storyboardId) as? UIViewController {
+                print("Push \(String(describing: viewController.self)) in \(String(describing: navigationController.self))")
+                navigationController.pushViewController(viewController, animated: true)
+            } else {
+                print("ViewController not found")
+            }
+            
+        } else {
+            print("NavigationController for \(String(describing: currentViewController.self)) not found")
+        }
+    
+        
+        
+    }
+    
 }

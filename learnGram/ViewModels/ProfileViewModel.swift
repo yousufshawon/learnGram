@@ -10,6 +10,8 @@ import Foundation
 class ProfiViewModel {
     
     private let userRepository : UserRepoProtocol
+    let imageCollectionItem = 30
+    let itemsInCollectiRow = 3
     
     init(userRepository: UserRepoProtocol) {
         self.userRepository = userRepository
