@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FeedItemViewCell: UITableViewCell {
     
@@ -13,6 +14,7 @@ class FeedItemViewCell: UITableViewCell {
     @IBOutlet var descriptionLabel : UILabel!
     @IBOutlet var nameLabel : UILabel!
     @IBOutlet var profilePic : UIImageView!
+    @IBOutlet var contentImageView : UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +27,7 @@ class FeedItemViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func bindView(index:Int) {
+    func bindView(index:Int, feedItem : FeedItemData) {
         var fixedText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
         var dText = "\(index) \(fixedText)"
         
@@ -36,9 +38,13 @@ class FeedItemViewCell: UITableViewCell {
         if(index % 5 == 0) {
             dText = "\(index) Lorem Ipsum is simply dummy text "
         }
-        descriptionLabel.text = dText
+        //descriptionLabel.text = dText
+        descriptionLabel.text = feedItem.description
         nameLabel.text = "User\(index)"
         profilePic.makeCircleShape()
+        // custom extension method to load image from internet
+        //contentImageView.load(url: feedItem.url)
+        contentImageView.kf.setImage(with: feedItem.url)
     }
     
 }

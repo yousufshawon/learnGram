@@ -12,18 +12,29 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     static let storyboardId = "HomeViewController"
     @IBOutlet private var tableView : UITableView!
+    
+    private let viewModel = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("HomeViewController: viewDidLoad")
 
         // Do any additional setup after loading the view.
+        viewModel.getPhotos() { result in
+            self.tableView.reloadData()
+            if(result) {
+               print("Photo founnd")
+            } else {
+                print("No photo found")
+            }
+            
+        }
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("HomeViewController: tableView numberOfRowsInSection section -> \(section)")
-        return 10
+        return viewModel.feedItems.count
     }
     
     
@@ -32,7 +43,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let text = "Section -> \(indexPath.section) Row -> \(indexPath.row)"
      
         let feedCell = getFeedCell(tableView: tableView)
-        feedCell.bindView(index: indexPath.row)
+        feedCell.bindView(index: indexPath.row, feedItem: viewModel.feedItems[indexPath.row])
         
         return feedCell;
     }

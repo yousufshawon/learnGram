@@ -61,6 +61,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" red="0.9857582842" green="1" blue="0.94414337869999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
+                <outlet property="contentImageView" destination="Rms-f3-JUH" id="zY8-oZ-4eL"/>
                 <outlet property="descriptionLabel" destination="qPF-kY-vsz" id="mcz-Zo-SS1"/>
                 <outlet property="nameLabel" destination="mYc-Zr-X2t" id="hSN-C2-hCp"/>
                 <outlet property="profilePic" destination="SdL-2Z-eqa" id="X7V-xv-Aev"/>

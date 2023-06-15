@@ -39,6 +39,11 @@
 		CBD6FE052A2C67370027835F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6FE032A2C67370027835F /* ImageCell.swift */; };
 		CBD6FE062A2C67370027835F /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD6FE042A2C67370027835F /* ImageCell.xib */; };
 		CBD6FE082A2CEDEF0027835F /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6FE072A2CEDEF0027835F /* PostDetailsViewController.swift */; };
+		CBD6FE0A2A2E40BB0027835F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6FE092A2E40BA0027835F /* Keys.swift */; };
+		CBD6FE0D2A2E4C4F0027835F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6FE0C2A2E4C4F0027835F /* HomeViewModel.swift */; };
+		CBD6FE102A2E4C990027835F /* UnsplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6FE0F2A2E4C990027835F /* UnsplashService.swift */; };
+		CBD6FE122A31043B0027835F /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6FE112A31043B0027835F /* NetworkModel.swift */; };
+		CBD6FE142A3115C80027835F /* FeedItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD6FE132A3115C80027835F /* FeedItemData.swift */; };
 		CBFA1D872A1295E000D4F257 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA1D862A1295E000D4F257 /* ForgotPasswordViewController.swift */; };
 		CBFA1D892A12AE2E00D4F257 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA1D882A12AE2D00D4F257 /* SignupViewController.swift */; };
 		CBFA1D8B2A1513AB00D4F257 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFA1D8A2A1513AB00D4F257 /* ProfileViewController.swift */; };
@@ -86,6 +91,11 @@
 		CBD6FE032A2C67370027835F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		CBD6FE042A2C67370027835F /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		CBD6FE072A2CEDEF0027835F /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		CBD6FE092A2E40BA0027835F /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		CBD6FE0C2A2E4C4F0027835F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CBD6FE0F2A2E4C990027835F /* UnsplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
+		CBD6FE112A31043B0027835F /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		CBD6FE132A3115C80027835F /* FeedItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemData.swift; sourceTree = "<group>"; };
 		CBFA1D862A1295E000D4F257 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CBFA1D882A12AE2D00D4F257 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CBFA1D8A2A1513AB00D4F257 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +156,8 @@
 		CB6F292929FF919D0041FDE7 /* learnGram */ = {
 			isa = PBXGroup;
 			children = (
+				CBD6FE0E2A2E4C680027835F /* Network */,
+				CBD6FE0B2A2E44D70027835F /* Private */,
 				CBD6FDF72A1FE5060027835F /* CustomCell */,
 				CBCFF6092A17D79800B481AF /* Manager */,
 				CBFA1D8C2A15305500D4F257 /* Extension */,
@@ -213,6 +225,7 @@
 				CBCFF60C2A17D82B00B481AF /* LoginViewModel.swift */,
 				CBD6FDE92A190DE30027835F /* SignupViewModel.swift */,
 				CBD6FDF12A1A9AC00027835F /* ProfileViewModel.swift */,
+				CBD6FE0C2A2E4C4F0027835F /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -243,6 +256,7 @@
 				CBFA1D952A16946500D4F257 /* AuthData.swift */,
 				CBCFF6052A16AA2800B481AF /* UserDataSource.swift */,
 				CBCFF6072A16AA7800B481AF /* User.swift */,
+				CBD6FE132A3115C80027835F /* FeedItemData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -274,6 +288,23 @@
 				CBD6FE012A2C65810027835F /* ProfileViewControllerExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CBD6FE0B2A2E44D70027835F /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				CBD6FE092A2E40BA0027835F /* Keys.swift */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		CBD6FE0E2A2E4C680027835F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CBD6FE0F2A2E4C990027835F /* UnsplashService.swift */,
+				CBD6FE112A31043B0027835F /* NetworkModel.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		CBFA1D8C2A15305500D4F257 /* Extension */ = {
@@ -407,11 +438,15 @@
 				CBCFF60D2A17D82B00B481AF /* LoginViewModel.swift in Sources */,
 				CBD6FE052A2C67370027835F /* ImageCell.swift in Sources */,
 				CBD6FDEA2A190DE30027835F /* SignupViewModel.swift in Sources */,
+				CBD6FE0A2A2E40BB0027835F /* Keys.swift in Sources */,
 				CBD6FDF22A1A9AC00027835F /* ProfileViewModel.swift in Sources */,
 				CBFA1D902A1556DE00D4F257 /* UIColorExtension.swift in Sources */,
 				CB6E9B792A0BF663008917B4 /* LoginController.swift in Sources */,
+				CBD6FE122A31043B0027835F /* NetworkModel.swift in Sources */,
 				CBD6FDF62A1E8D2D0027835F /* HomeViewController.swift in Sources */,
 				CBCFF60F2A17D8E500B481AF /* AuthManagerProtocol.swift in Sources */,
+				CBD6FE102A2E4C990027835F /* UnsplashService.swift in Sources */,
+				CBD6FE142A3115C80027835F /* FeedItemData.swift in Sources */,
 				CB6F294C2A0015AC0041FDE7 /* SplashRepositoryImpl.swift in Sources */,
 				CB6F294629FFF85C0041FDE7 /* Utility.swift in Sources */,
 				CBFA1D922A16932800D4F257 /* UserRepoProtocol.swift in Sources */,
@@ -421,6 +456,7 @@
 				CB6F29512A00173E0041FDE7 /* SplashViewModel.swift in Sources */,
 				CBD6FDEE2A1A6FDE0027835F /* UserLocalRepository.swift in Sources */,
 				CBD6FE082A2CEDEF0027835F /* PostDetailsViewController.swift in Sources */,
+				CBD6FE0D2A2E4C4F0027835F /* HomeViewModel.swift in Sources */,
 				CB6F292B29FF919D0041FDE7 /* AppDelegate.swift in Sources */,
 				CB6F292D29FF919D0041FDE7 /* SceneDelegate.swift in Sources */,
 				CBCFF6082A16AA7800B481AF /* User.swift in Sources */,

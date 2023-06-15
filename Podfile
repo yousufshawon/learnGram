@@ -8,5 +8,7 @@ target 'learnGram' do
   # Pods for learnGram
   pod 'IQKeyboardManager'
   pod 'ActionKit', '~> 2.5.2'
+  pod 'Alamofire'
+  pod 'Kingfisher', '~> 7.0'
 end
 
