@@ -29,8 +29,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             
         }
+        addButtonForCreatePost()
     }
     
+    private func addButtonForCreatePost() {
+        
+        let createPostButton = UIBarButtonItem(title: "Post", style: .plain, target: self, action: #selector(onCreatePostAction))
+        
+        self.navigationItem.rightBarButtonItem = createPostButton
+        
+    }
+    
+    @objc func onCreatePostAction() {
+        print("Load create post controller")
+        NavigationManager.pushViewControllerToNavigationController(from: self, with: CreatePostViewController.storyboardId)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("HomeViewController: tableView numberOfRowsInSection section -> \(section)")

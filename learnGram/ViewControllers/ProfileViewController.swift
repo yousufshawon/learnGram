@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet private var buttonLogout : UIButton!
     @IBOutlet private var labelName : UILabel!
     @IBOutlet private var collectionView : UICollectionView!
+    @IBOutlet private var editprofileButton : UIButton!
     
     private let navigationManager = NavigationManager()
     let viewModel = ProfiViewModel(userRepository: UserLocalRepository())
@@ -63,6 +64,10 @@ class ProfileViewController: UIViewController {
         navigationManager.replaceWithLoginNavigationController(currentViewController: self)
     }
     
+    @IBAction private func oneEditProfileAction(){
+        
+    }
+    
     private func setUserProfile() {
         let user = viewModel.getUser()
         
@@ -73,17 +78,5 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

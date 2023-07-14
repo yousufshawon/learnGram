@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F890C0C4535F45803CEFFD2 /* Pods_learnGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D9E7C1A785565E809222F7 /* Pods_learnGram.framework */; };
+		CB3102952A61B45A00EDC143 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3102942A61B45A00EDC143 /* CreatePostViewController.swift */; };
 		CB6E9B792A0BF663008917B4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E9B782A0BF663008917B4 /* LoginController.swift */; };
 		CB6E9B7B2A0C1A0B008917B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6E9B7A2A0C1A0B008917B4 /* Constants.swift */; };
 		CB6F292B29FF919D0041FDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F292A29FF919D0041FDE7 /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		48D9E7C1A785565E809222F7 /* Pods_learnGram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learnGram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BFC0273C31348295EA4E9B /* Pods-learnGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnGram.debug.xcconfig"; path = "Target Support Files/Pods-learnGram/Pods-learnGram.debug.xcconfig"; sourceTree = "<group>"; };
 		B6D67EE7829A6E0B77E5B3EC /* Pods-learnGram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnGram.release.xcconfig"; path = "Target Support Files/Pods-learnGram/Pods-learnGram.release.xcconfig"; sourceTree = "<group>"; };
+		CB3102942A61B45A00EDC143 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		CB6E9B782A0BF663008917B4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CB6E9B7A2A0C1A0B008917B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB6F292729FF919D0041FDE7 /* learnGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +197,7 @@
 				CBFA1D8A2A1513AB00D4F257 /* ProfileViewController.swift */,
 				CBD6FDF52A1E8D2D0027835F /* HomeViewController.swift */,
 				CBD6FE072A2CEDEF0027835F /* PostDetailsViewController.swift */,
+				CB3102942A61B45A00EDC143 /* CreatePostViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				CB6E9B792A0BF663008917B4 /* LoginController.swift in Sources */,
 				CBD6FE122A31043B0027835F /* NetworkModel.swift in Sources */,
 				CBD6FDF62A1E8D2D0027835F /* HomeViewController.swift in Sources */,
+				CB3102952A61B45A00EDC143 /* CreatePostViewController.swift in Sources */,
 				CBCFF60F2A17D8E500B481AF /* AuthManagerProtocol.swift in Sources */,
 				CBD6FE102A2E4C990027835F /* UnsplashService.swift in Sources */,
 				CBD6FE142A3115C80027835F /* FeedItemData.swift in Sources */,

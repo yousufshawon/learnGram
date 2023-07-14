@@ -259,6 +259,63 @@
             </objects>
             <point key="canvasLocation" x="1360.8695652173915" y="-2119.4196428571427"/>
         </scene>
+        <!--Create Post View Controller-->
+        <scene sceneID="tv2-a9-MpT">
+            <objects>
+                <viewController storyboardIdentifier="CreatePostViewController" id="iiI-u3-igo" customClass="CreatePostViewController" customModule="learnGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i1T-cg-xen">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdZ-Bl-Dpi">
+                                <rect key="frame" x="20" y="777" width="374" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Upload Image">
+                                    <color key="baseBackgroundColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onUploadImageAction" destination="iiI-u3-igo" eventType="touchUpInside" id="mGJ-0d-kR0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-72-AUr">
+                                <rect key="frame" x="20" y="347" width="374" height="400"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="fhJ-5e-jzO"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-ai-WLu">
+                                <rect key="frame" x="20" y="78" width="374" height="239"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cGo-Lh-ciM"/>
+                        <color key="backgroundColor" red="0.95442160070000004" green="1" blue="0.90014274930000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cGo-Lh-ciM" firstAttribute="bottom" secondItem="VdZ-Bl-Dpi" secondAttribute="bottom" constant="50" id="IGS-ST-a1I"/>
+                            <constraint firstItem="VdZ-Bl-Dpi" firstAttribute="leading" secondItem="cGo-Lh-ciM" secondAttribute="leading" constant="20" id="LSX-yg-pN2"/>
+                            <constraint firstItem="FaP-72-AUr" firstAttribute="top" secondItem="OBD-ai-WLu" secondAttribute="bottom" constant="30" id="TML-3a-1fO"/>
+                            <constraint firstItem="FaP-72-AUr" firstAttribute="leading" secondItem="cGo-Lh-ciM" secondAttribute="leading" constant="20" id="cGY-Tq-q8A"/>
+                            <constraint firstItem="cGo-Lh-ciM" firstAttribute="trailing" secondItem="FaP-72-AUr" secondAttribute="trailing" constant="20" id="dMe-1b-zOI"/>
+                            <constraint firstItem="VdZ-Bl-Dpi" firstAttribute="top" secondItem="FaP-72-AUr" secondAttribute="bottom" constant="30" id="ktM-W0-NhT"/>
+                            <constraint firstItem="cGo-Lh-ciM" firstAttribute="trailing" secondItem="VdZ-Bl-Dpi" secondAttribute="trailing" constant="20" id="mqV-f7-o7n"/>
+                            <constraint firstItem="cGo-Lh-ciM" firstAttribute="trailing" secondItem="OBD-ai-WLu" secondAttribute="trailing" constant="20" id="qQb-bs-GJL"/>
+                            <constraint firstItem="OBD-ai-WLu" firstAttribute="top" secondItem="cGo-Lh-ciM" secondAttribute="top" constant="30" id="uxB-Ka-Kvc"/>
+                            <constraint firstItem="OBD-ai-WLu" firstAttribute="leading" secondItem="cGo-Lh-ciM" secondAttribute="leading" constant="20" id="wd2-AH-AfI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="uploadButton" destination="VdZ-Bl-Dpi" id="g3G-ke-FAv"/>
+                        <outlet property="uploadedImageView" destination="FaP-72-AUr" id="KwT-zO-3P3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99n-04-KDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2118.840579710145" y="-2119.4196428571427"/>
+        </scene>
         <!--Search-->
         <scene sceneID="Dai-fI-MRj">
             <objects>
@@ -367,9 +424,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i6-8i-6Zf">
                                         <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Follow">
+                                        <buttonConfiguration key="configuration" style="filled" title="Edit Profile">
                                             <color key="baseBackgroundColor" red="0.36056104300000003" green="0.35586428640000001" blue="0.84008854629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="oneEditProfileAction" destination="G5H-S3-fBb" eventType="touchUpInside" id="neA-3R-G8M"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsq-Fb-kvE">
                                         <rect key="frame" x="192" y="0.0" width="182" height="40"/>
@@ -447,6 +507,7 @@
                     <connections>
                         <outlet property="buttonLogout" destination="oaW-rz-KId" id="zuo-SU-pn9"/>
                         <outlet property="collectionView" destination="NL7-ir-fWr" id="yRp-Y6-eh8"/>
+                        <outlet property="editprofileButton" destination="5i6-8i-6Zf" id="vDX-f0-26i"/>
                         <outlet property="labelName" destination="lDs-9a-cKI" id="KgE-tG-RvP"/>
                         <outlet property="profileImageView" destination="bMv-85-tT2" id="Y3p-2H-myI"/>
                     </connections>
@@ -775,6 +836,9 @@
         <image name="square" width="240" height="240"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
